@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --mainOrange: #f15025;
+  --mainAqua: Aquamarine;
+}
+body {
+  font-family: "Caveat", cursive;
+  color: #000;
+  background: #fff;
+}
