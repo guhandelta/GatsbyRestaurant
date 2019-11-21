@@ -15,7 +15,8 @@ export const transFunction = (
   time = "0.5s",
   type = "linear"
 ) => {
-  return `transition:${property} ${time} ${type}`
+  return `transition:${property} ${time} ${type}` // These values will be filled up with default val passed into the fn, else would be-
+  //- replaced by the values provided by the user, during the function call
 }
 export const transObject = ({
   property = "all",

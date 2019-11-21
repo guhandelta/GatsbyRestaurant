@@ -67,4 +67,14 @@ const LinkWrapper = styled.ul`
   }
   height: ${props => (props.open ? "152px" : "0px")};
   overflow: hidden;
-`
+  ${styles.transObject({ time: "0.6s" })};
+  @media (min-width: 769px) {
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+    .nav-link:hover {
+      background: ${styles.colors.mainWhite};
+      padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+  }
+` //Empty object should be specified if no params are passed, as the input param for the fn() is given in an obj format
