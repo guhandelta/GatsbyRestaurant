@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import logo from "../../../images/logo_e.svg"
 import { FaAlignRight } from "react-icons/fa"
 import styled from "styled-components"
+import { styles } from "../../../utils"
 
 export default class NavbarHeader extends Component {
   render() {
@@ -25,18 +26,18 @@ export default class NavbarHeader extends Component {
   }
 }
 
+// const gold = "#d2aa5c" // can give by color name or hex code
 const HeaderWrapper = styled.div`
   padding: 0.4rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   .toggle-icon {
-  .toggle-icon {
     font-size: 1.75rem;
-    color: coral;
+    color: ${styles.colors.mainGold};
     cursor: pointer;
   }
-  @media (min-width:768){
+  @media (min-width: 768px) {
     .toggle-icon {
       display: none;
     }

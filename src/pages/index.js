@@ -10,7 +10,6 @@ const IndexPage = () => (
     <h1>
       Hello from Gatsby <FaBitcoin />
     </h1>
-    <ButtonWrapper>Click Me!</ButtonWrapper>
   </Layout>
 )
 
