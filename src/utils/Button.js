@@ -16,6 +16,8 @@ const BannerButton = styled.button`
   &:hover {
     background: ${styles.colors.mainWhite};
     color: ${styles.colors.mainBlack};
+    border: none;
+    margin: 0.5px auto;
     cursor: pointer;
   }
 `
