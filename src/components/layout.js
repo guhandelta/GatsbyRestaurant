@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { createGlobalStyle } from "styled-components" // Should be placed on top of all the components, for global style to be applied
 import Navbar from "./globals/navbar"
+import Footer from "../components/globals/Footer"
 // import "./bootstrap.min.css"
 // import "./layout.css"
 // import "../sass/layout.scss"
@@ -19,6 +20,7 @@ const Layout = ({ children }) => {
       <GlobalStyle />
       <Navbar />
       {children}
+      <Footer />
     </React.Fragment>
   )
 }

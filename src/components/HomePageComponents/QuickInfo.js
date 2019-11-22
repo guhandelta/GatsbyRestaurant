@@ -11,10 +11,12 @@ export default class QuickInfo extends Component {
         <Title message="Let me tell you about" title="Out Mission" />
         <QuickInfoWapper>
           <p className="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-            officiis dolorum optio doloremque numquam nesciunt eos eveniet
-            architecto quaerat ipsum natus omnis exercitationem quas aperiam
-            veritatis asperiores, quia aut cum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+            inventore porro ipsum optio officia iste distinctio repellendus
+            veritatis enim repellat doloribus, consectetur, saepe beatae iusto,
+            itaque quam provident. Similique itaque et sint excepturi nam aut
+            commodi quas, vero debitis nostrum labore voluptatum quos quasi
+            architecto minima magnam id autem aperiam?
           </p>
           <Link to="/about/" style={{ textDecoration: "none" }}>
             About
