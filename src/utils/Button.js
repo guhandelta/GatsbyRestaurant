@@ -15,7 +15,7 @@ const BannerButton = styled.button`
   ${styles.transition({})};
   &:hover {
     background: ${styles.colors.mainWhite};
-    color: ${styles.colors.mainBlack};
+    color: ${styles.colors.mainGold};
     /* border: none;
     margin: 0.5px auto; */
     cursor: pointer;
