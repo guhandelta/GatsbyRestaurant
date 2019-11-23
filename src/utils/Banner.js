@@ -6,7 +6,7 @@ export default function Banner({ title, subtitle, children }) {
   return (
     <BannerWrapper>
       <h1 className="title">{title}</h1>
-      <h3 className="subtitle">{subtitle}</h3>
+      <h3 className="subtitle">{subtitle}</h3>  
       {children}
     </BannerWrapper>
   )
