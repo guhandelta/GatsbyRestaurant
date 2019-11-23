@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Restaurant Website`,
@@ -40,9 +44,9 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: "tlc2igeeffod",
+        spaceId: process.env.SPACE_ID,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: "Hw2hw7QkUnkKqdEv5_moQs3jXCyXPe_Du-tCw5elzFw", //process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken: process.env.ACCESS_TOKEN,
       },
     },
   ],
