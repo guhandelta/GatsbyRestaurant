@@ -6,24 +6,14 @@ import Img from "gatsby-image"
 
 const query = graphql`
   {
-    img1: file(relativePath: { eq: "homeGallery/img-1.jpeg" }) {
-      childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    img2: file(relativePath: { eq: "homeGallery/img-2.jpeg" }) {
-      childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    img3: file(relativePath: { eq: "homeGallery/img-3.jpeg" }) {
-      childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_tracedSVG
+    getImages: allFile(filter: { relativeDirectory: { eq: "homeGallery" } }) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 500) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
         }
       }
     }
@@ -35,24 +25,21 @@ export default function Gallery() {
     <StaticQuery
       query={query}
       render={data => {
-        const img1 = data.img1.childImageSharp.fluid
-        const img2 = data.img2.childImageSharp.fluid
-        const img3 = data.img3.childImageSharp.fluid
+        // data =>getImages(which is an obj) -> getImages -> edges(array of nodes) -each node-> childImageSharp -> fluid -> image
+        const nodeArray = data.getImages.edges
         return (
           <Section>
             <GalleryWrapper>
-              <div className="item item-1">
-                <Img fluid={img1} />
-                <p className="info">Awesome Pizza</p>
-              </div>
-              <div className="item item-2">
-                <Img fluid={img2} />
-                <p className="info">Awesome Pork</p>
-              </div>
-              <div className="item item-3">
-                <Img fluid={img3} />
-                <p className="info">Awesome Steak</p>
-              </div>
+              {nodeArray.map(({ node }, index) => {
+                // Index makes it easier than using id attr available in every node
+                //The node is destructured here, as an alternative for writing lenghty lines for loopinh through evey item in the node
+                return (
+                  <div key={index} className={`item item-${index + 1}`}>
+                    <Img fluid={node.childImageSharp.fluid} />
+                    <p className="info">Awesome Pizza</p>
+                  </div>
+                )
+              })}
             </GalleryWrapper>
           </Section>
         )
