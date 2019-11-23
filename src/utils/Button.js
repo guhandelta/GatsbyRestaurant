@@ -7,6 +7,7 @@ const BannerButton = styled.button`
   background: transparent;
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
+  text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   font-weight: 700;
@@ -19,6 +20,10 @@ const BannerButton = styled.button`
     /* border: none;
     margin: 0.5px auto; */
     cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+    transition: 1s linear;
   }
 `
 
